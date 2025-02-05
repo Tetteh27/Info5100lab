@@ -69,9 +69,8 @@
                       <Component id="age" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
                       <Component id="phonenumber" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                       <Component id="email" alignment="0" min="-2" pref="37" max="-2" attributes="0"/>
-                      <Component id="Uploadphoto" alignment="0" min="-2" pref="103" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="137" max="32767" attributes="0"/>
+                  <EmptySpace pref="145" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="otherradiobutton" min="-2" pref="98" max="-2" attributes="0"/>
                       <Component id="femaleradiobutton" min="-2" pref="98" max="-2" attributes="0"/>
@@ -84,7 +83,6 @@
                           <Component id="firstNametextfield" alignment="0" max="32767" attributes="0"/>
                           <Component id="phonetextfieldbutton" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <Component id="selectphotofield" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
               </Group>
@@ -134,12 +132,7 @@
                       <Component id="email" min="-2" pref="16" max="-2" attributes="0"/>
                       <Component id="emailtextfieldbutton" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="Uploadphoto" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="selectphotofield" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="31" max="32767" attributes="0"/>
+                  <EmptySpace pref="69" max="32767" attributes="0"/>
                   <Component id="submitbutton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -232,16 +225,6 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="submitbuttonActionPerformed"/>
           </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Uploadphoto">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Upload Photo"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="selectphotofield">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Select Photo"/>
-          </Properties>
         </Component>
       </SubComponents>
     </Container>

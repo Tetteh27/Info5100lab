@@ -9,6 +9,7 @@ import java.awt.HeadlessException;
 import java.io.File;
 import javax.swing.JOptionPane;
 
+
 /**
  *
  * @author ProBook
@@ -49,8 +50,6 @@ public class mainjframe extends javax.swing.JFrame {
         email = new javax.swing.JLabel();
         emailtextfieldbutton = new javax.swing.JTextField();
         submitbutton = new javax.swing.JButton();
-        Uploadphoto = new javax.swing.JLabel();
-        selectphotofield = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -99,10 +98,6 @@ public class mainjframe extends javax.swing.JFrame {
             }
         });
 
-        Uploadphoto.setText("Upload Photo");
-
-        selectphotofield.setText("Select Photo");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -120,9 +115,8 @@ public class mainjframe extends javax.swing.JFrame {
                         .addComponent(Firstname, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE))
                     .addComponent(age, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(phonenumber, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Uploadphoto, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 137, Short.MAX_VALUE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 145, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(otherradiobutton, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(femaleradiobutton, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -133,8 +127,7 @@ public class mainjframe extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(lastNametextfield, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                         .addComponent(firstNametextfield, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(phonetextfieldbutton, javax.swing.GroupLayout.Alignment.LEADING))
-                    .addComponent(selectphotofield, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(phonetextfieldbutton, javax.swing.GroupLayout.Alignment.LEADING)))
                 .addGap(132, 132, 132))
         );
         jPanel1Layout.setVerticalGroup(
@@ -173,11 +166,7 @@ public class mainjframe extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(emailtextfieldbutton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Uploadphoto)
-                    .addComponent(selectphotofield))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(submitbutton)
                 .addContainerGap())
         );
@@ -219,7 +208,7 @@ public class mainjframe extends javax.swing.JFrame {
         int age;
         int phonenumber;
         String email = "";
-        File photoFile = null;
+        
         
         name = this.firstNametextfield.getText().trim();
         lastname = this.lastNametextfield.getText().trim();
@@ -243,12 +232,7 @@ public class mainjframe extends javax.swing.JFrame {
         System.out.println(phonenumber);
         System.out.println(email);
         
-        String photoPath = this.selectphotofield.getText().trim();
-        if (photoPath.isEmpty()) {
-            photoFile = null;
-        } else {
-            photoFile = new File(photoPath);
-        }
+        
         
         if (name.isBlank()) {
             JOptionPane.showMessageDialog(rootPane, "Please enter your first name", "Oops", HEIGHT);
@@ -311,7 +295,6 @@ public class mainjframe extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Firstname;
     private javax.swing.JLabel Lastname;
-    private javax.swing.JLabel Uploadphoto;
     private javax.swing.JLabel Userprofile;
     private javax.swing.JLabel age;
     private javax.swing.JTextField agetextfield;
@@ -327,7 +310,6 @@ public class mainjframe extends javax.swing.JFrame {
     private javax.swing.JRadioButton otherradiobutton;
     private javax.swing.JLabel phonenumber;
     private javax.swing.JTextField phonetextfieldbutton;
-    private javax.swing.JButton selectphotofield;
     private javax.swing.JButton submitbutton;
     // End of variables declaration//GEN-END:variables
 }
