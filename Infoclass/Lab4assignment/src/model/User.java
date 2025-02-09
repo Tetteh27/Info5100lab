@@ -4,6 +4,9 @@
  */
 package model;
 
+
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author ProBook
@@ -14,9 +17,10 @@ public class User {
     private String lastname;
     private String gender = "";
     private int age;
-    private int phonenumber;
+    private String phonenumber;
     private String email = "";
     private String hobbies;
+    private ImageIcon imagePicture;
     //method 
 
     public String getName() {
@@ -51,11 +55,11 @@ public class User {
         this.age = age;
     }
 
-    public int getPhonenumber() {
+    public String getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(int phonenumber) {
+    public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
 
@@ -75,9 +79,23 @@ public class User {
         this.hobbies = hobbies;
     }
 
+    public ImageIcon getImagePicture() {
+        return imagePicture;
+    }
+
+    public void setImagePicture(ImageIcon imagePicture) {
+        this.imagePicture = imagePicture;
+    }
+
     @Override
     public String toString() {
-        return "User{" + "name=" + name + ", lastname=" + lastname + ", gender=" + gender + ", age=" + age + ", phonenumber=" + phonenumber + ", email=" + email + ", hobbies=" + hobbies + '}';
+        return "First Name: " + name + "\n" +
+            "Last Name: " + lastname + "\n" +
+            "Gender: " + gender + "\n" +
+            "Age: " + age + "\n" +
+            "Phone Number: " + phonenumber + "\n" +
+            "Email: " + email + "\n" +
+            "Hobbies: " + hobbies;
     }
     
 }
